@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "state.h"
 
 namespace Ui {
 class MainWindow;
@@ -17,11 +18,21 @@ public:
     
 private:
     Ui::MainWindow *ui;
+    state *editorStatus;
 private slots:
     void aboutAction();
     void saveAction();
+    void newAction();
+    void openAction();
+    void saveasAction();
+    void closeAction();
+    void fontAction();
+    void wordwrapAction(bool);
+    void updateCaption();
+    void textChangedStatus();
 protected:
     void resizeEvent(QResizeEvent * event);
+    void closeEvent(QCloseEvent * event);
 };
 
 #endif // MAINWINDOW_H

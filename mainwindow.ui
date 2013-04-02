@@ -29,11 +29,11 @@
       <height>199</height>
      </rect>
     </property>
-    <property name="horizontalScrollBarPolicy">
-     <enum>Qt::ScrollBarAsNeeded</enum>
-    </property>
     <property name="documentTitle">
-     <string>Untitled</string>
+     <string/>
+    </property>
+    <property name="lineWrapMode">
+     <enum>QTextEdit::NoWrap</enum>
     </property>
     <property name="acceptRichText">
      <bool>false</bool>
@@ -53,7 +53,7 @@
     <property name="title">
      <string>&amp;File</string>
     </property>
-    <addaction name="action_Create"/>
+    <addaction name="action_New"/>
     <addaction name="action_Open"/>
     <addaction name="action_Save"/>
     <addaction name="action_Save_As"/>
@@ -104,49 +104,76 @@
    <addaction name="menu_Help"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="action_Create">
+  <action name="action_New">
    <property name="text">
     <string>&amp;New</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
    </property>
   </action>
   <action name="action_Open">
    <property name="text">
     <string>&amp;Open</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
   </action>
   <action name="action_Save">
    <property name="text">
     <string>&amp;Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
    </property>
   </action>
   <action name="action_Save_As">
    <property name="text">
     <string>&amp;Save As</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
   </action>
   <action name="action_Exit">
    <property name="text">
     <string>&amp;Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
    </property>
   </action>
   <action name="action_Undo">
    <property name="text">
     <string>&amp;Undo</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
   </action>
   <action name="action_Repeat">
    <property name="text">
     <string>&amp;Repeat</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Z</string>
    </property>
   </action>
   <action name="action_Copy">
    <property name="text">
     <string>&amp;Copy</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
   </action>
   <action name="action_Paste">
    <property name="text">
     <string>&amp;Paste</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
    </property>
   </action>
   <action name="action_Delete">
@@ -157,6 +184,9 @@
   <action name="action_Cut">
    <property name="text">
     <string>&amp;Cut</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
    </property>
   </action>
   <action name="action_Find">
